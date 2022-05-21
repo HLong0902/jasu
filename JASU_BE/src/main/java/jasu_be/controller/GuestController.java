@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+@CrossOrigin(origins ="http://localhost:3000")
 @RestController
 @RequestMapping("api/guest")
 public class GuestController extends CommonController {
@@ -23,7 +24,6 @@ public class GuestController extends CommonController {
     private TeacherService teacherService;
     @Autowired
     private UserService userService;
-
 
     @PostMapping("signup")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {

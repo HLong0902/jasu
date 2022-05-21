@@ -13,18 +13,14 @@ export default class UserControl extends Component {
   componentDidMount() {
     UserService.getUsers().then((res) => {
       this.setState({
-        userDTOs: res.data,
+        userDTOs: res.data.data,
       });
     });
   }
-  
 
   render() {
     return (
       <div className="findJasu">
-        {
-          this.state.userDTOs = this.state.userDTOs.data
-        }
         <FindJasuView userList={this.state.userDTOs} />
       </div>
     );

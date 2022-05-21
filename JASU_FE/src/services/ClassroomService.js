@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const CLASSROOM_API_BASE = 'http://localhost:9200/admin/classroom'
+const CLASSROOM_API_BASE = 'http://localhost:9200/api/guest/allClass'
 class ClassroomService {
     getClassrooms() {
         return axios.get(CLASSROOM_API_BASE);

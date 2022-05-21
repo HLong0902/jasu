@@ -5,11 +5,11 @@ export default function LoginView() {
     <div>
       <div className="login">
         <header className="login__header">
-          <h2><svg class="icon">
+          <h2><svg className="icon">
             <use href="#icon-lock" />
           </svg>Đăng nhập</h2>
         </header>
-        <form action="#" class="login__form" method="POST">
+        <form action="#" className="login__form" method="POST">
           <div>
             <label htmlFor="email">E-mail address</label>
             <input type="email" id="email" name="email" placeholder="mail@address.com" />
