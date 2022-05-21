@@ -1,0 +1,55 @@
+.homePage,
+.findJasu,
+.findClass,
+.userControl,
+.classControl {
+  position: fixed;
+  left: 13.5%;
+  height: 100%;
+  width: 100%;
+
+  ul {
+    position: absolute;
+    top: 45px;
+    bottom: 0rem;
+    overflow: scroll;
+    border-radius: 5px;
+    width: 86%;
+
+    li {
+      width: 100%;
+      height: fit-content;
+      padding: 10px;
+      border: 3px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      display: flex;
+      background-color: white;
+      background-clip: padding-box;
+
+      .userImg {
+        img {
+          height: 17rem;
+          max-width: 17rem;
+        }
+        text-align: center;
+        margin-right: 10px;
+        width: 17rem;
+      }
+
+      ._in4 {
+        width: 90%;
+      }
+
+      .icon_ {
+        height: fit-content;
+
+        button {
+          border: white;
+          background-color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.topNav {
+    position: absolute;
+    top: 1px;
+    display: flex;
+    
+    .input-txt {
+        border-radius: 5px;
+        width: 500px;
+        height: 40px;
+        border: 2px solid #ccc;
+
+    }
+    .btn {
+        position: relative;
+        background-color: white;
+        border: black;
+        border-radius: 45px;
+        cursor: pointer;
+    }
+    .btn.sch {
+        width: 35px;
+        height: 35px;
+        padding-top: 1px;
+        margin: 3px 2px 0 0;
+    }
+    .btn.clr {
+        width: 30px;
+        height: 30px;
+        padding-top: 1px;
+        margin: 5px 0 0 -68px;
+    }
+    .btn.addUser {
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        align-items: center;
+        padding-top: 7px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+    }
+}

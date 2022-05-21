@@ -1,0 +1,48 @@
+{
+    "user":[
+        {   
+            "id": 1,
+            "name": "Nguyễn Hoàng Long",
+            "phone":"0344159762",
+            "sex": "male",
+            "level":"2",
+            "isAccess": 125855288,
+            "rate": 5
+        },
+        {
+            "id": 2,
+            "name": "Nguyễn Văn Bảo",
+            "phone":"0982572568",
+            "sex": "male",
+            "isAccess": 8439842928,
+            "rate": 5
+
+        },
+        {
+            "id": 3,
+            "name": "Nghiêm Thị Thanh Thủy",
+            "phone":"0989463931",
+            "sex": "male",
+            "isAccess": 12585528,
+            "rate": 5
+        }
+    ],
+    "class":[
+        {
+            "idTeacher": 1,
+            "idStudents": "",
+            "type":"online",
+            "grade": "1",
+            "tone": "1",
+            "subject":"Math",
+            "class_in4":"",
+            "status":"0%",
+            "maxAllow":"30",
+            "minAllow":"10",
+            "price": 1000,
+            "startAt":"09/02/2022",
+            "endAt":"09/02/2023",
+            "location":"http"
+        }
+    ]
+}
