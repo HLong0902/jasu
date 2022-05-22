@@ -2,6 +2,7 @@ package jasu_be.controller;
 
 import jasu_be.dto.StudentDTO;
 import jasu_be.dto.TeacherDTO;
+import jasu_be.dto.requestdto.ClassroomRequest;
 import jasu_be.message.CommonController;
 
 import jasu_be.services.ClassroomService;
@@ -34,6 +35,11 @@ public class UserController extends CommonController {
         return toSuccessResult(teacherService.getAllTeachersAdmin());
     }
 
+    @PostMapping("newClass")
+    public ResponseEntity<?> createClass(@RequestBody ClassroomRequest classroom, @RequestParam Integer idOwner) {
+        return toSuccessResult(userService.createClass(classroom, idOwner));
+    }
+
     @PostMapping("updateAccountInfo")
     public ResponseEntity<?> updateUserInfo(@RequestParam Integer idAccount, @RequestParam(required = false) String pw, @RequestParam(required = false) String email) {
         return toSuccessResult(userService.updateAccountInfo(idAccount, pw, email));
@@ -49,7 +55,7 @@ public class UserController extends CommonController {
         return toSuccessResult(userService.updateTeacherInfo(teacher));
     }
 
-    @GetMapping("attemptClass")
+    @GetMapping("attemptedClass")
     public ResponseEntity<?> allAttemptClass(@RequestParam Integer idUser) {
         return toSuccessResult(userService.allAttemptClass(idUser));
     }

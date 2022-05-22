@@ -35,9 +35,10 @@ public class StudentRequest {
     private Integer age;
     private String address;
     private String sex;
+    private String avatar;
 
     public Student toEntity(){
         return new Student(0, this.getFullName(),
-                this.getAge(), this.getAddress(), this.getSex());
+                this.getAge(), this.getAddress(), this.getSex(), this.avatar);
     }
 }

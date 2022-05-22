@@ -65,7 +65,4 @@ public class StudentService {
         }
     }
 
-    public String createClass(ClassroomRequest classroom, Integer idOwner) {
-        return null;
-    }
 }

@@ -24,7 +24,7 @@ const changeLevelId = (levelId) => {
 
 const FindJasuView = ({ userList }) => {
   const [searchTerm, setSearchTerm] = useState("");
-  console.log(userList);
+  // console.log(userList);
   return (
     <div>
       <div className="topNav" id="topNavId">
@@ -35,7 +35,7 @@ const FindJasuView = ({ userList }) => {
           }}
           className="input-txt"
           id="input_jasu_id"
-          placeholder="Tìm kiếm theo tên, phone, email, facebook, ..."
+          placeholder="Tìm kiếm theo tên"
         />
       </div>
       <ul className="jasu-lists">

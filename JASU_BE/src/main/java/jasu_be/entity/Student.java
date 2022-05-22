@@ -25,7 +25,7 @@ public class Student {
     @Column(name = "full_name", nullable = false, length = 100)
     private String fullName;
     @Basic
-    @Column(name = "age", nullable = true)
+    @Column(name = "age")
     private Integer age;
     @Basic
     @Column(name = "address", nullable = true, length = 100)
@@ -34,6 +34,9 @@ public class Student {
     @Column(name = "sex", nullable = false, length = 45)
     private String sex;
 
+    @Basic
+    @Column(name = "avatar", length = 450)
+    private String avatar;
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -48,7 +51,7 @@ public class Student {
     }
 
     public StudentDTO toDTO(List<RateDTO> rateDTOS){
-        return new StudentDTO(this.getIdStudent(), this.getFullName(), this.getAge(), this.getAddress(), this.getSex(), rateDTOS);
+        return new StudentDTO(this.getIdStudent(), this.getFullName(), this.getAge(), this.getAddress(), this.getSex(),this.avatar, rateDTOS);
     }
 
     public StudentResAD toRes(List<Rate> rates){

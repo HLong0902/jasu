@@ -3,6 +3,7 @@ package jasu_be.services;
 import jasu_be.dto.ClassroomDTO;
 import jasu_be.dto.StudentDTO;
 import jasu_be.dto.TeacherDTO;
+import jasu_be.dto.requestdto.ClassroomRequest;
 import jasu_be.dto.requestdto.StudentRequest;
 import jasu_be.dto.requestdto.TeacherRequest;
 import jasu_be.entity.*;
@@ -26,6 +27,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
+//@Transactional
 public class UserService {
     @Autowired
     private ClassroomRepository classroomRepository;
@@ -133,7 +135,8 @@ public class UserService {
 
             int idNewStudent = Integer.parseInt(String.valueOf(accountRepository.findByUsername(account.getUsername()).get().getIdAccount()));
             Student newStudent = new Student(idNewStudent, signupRequestStudent.getFullName(),
-                    signupRequestStudent.getAge(), signupRequestStudent.getAddress(), signupRequestStudent.getSex());
+                    signupRequestStudent.getAge(), signupRequestStudent.getAddress(),
+                    signupRequestStudent.getSex(), signupRequestStudent.getAvatar());
             studentRepository.save(newStudent);
             return Const.SUCCESS;
         } catch (Exception e) {
@@ -167,10 +170,10 @@ public class UserService {
             accountRepository.save(account);
 
             int idNewTeacher = Integer.parseInt(String.valueOf(accountRepository.findByUsername(account.getUsername()).get().getIdAccount()));
-            Teacher newTeacher = new Teacher(idNewTeacher, signUpRequestTeacher.getFullName(),
+            Teacher newTeacher = new Teacher(idNewTeacher, signUpRequestTeacher.getFullname(),
                     signUpRequestTeacher.getAge(), signUpRequestTeacher.getAddress(),
                     signUpRequestTeacher.getSex(), signUpRequestTeacher.getCv(),
-                    signUpRequestTeacher.getLevel());
+                    signUpRequestTeacher.getLevel(), signUpRequestTeacher.getAvatar());
 
             teacherRepository.save(newTeacher);
             return Const.SUCCESS;
@@ -190,7 +193,7 @@ public class UserService {
             Student newStudent = new Student(Integer.parseInt(String.valueOf(account.getIdAccount())),
                     signupRequestStudent.getFullName(),
                     signupRequestStudent.getAge(), signupRequestStudent.getAddress(),
-                    signupRequestStudent.getSex());
+                    signupRequestStudent.getSex(), signupRequestStudent.getAvatar());
             studentRepository.save(newStudent);
 
             return Const.SUCCESS;
@@ -208,11 +211,10 @@ public class UserService {
 
             accountRepository.save(account);
             int idNewTeacher = Integer.parseInt(String.valueOf(accountRepository.findByUsername(account.getUsername()).get().getIdAccount()));
-            Teacher newTeacher = new Teacher(idNewTeacher, signupRequestTeacher.getFullName(),
+            Teacher newTeacher = new Teacher(idNewTeacher, signupRequestTeacher.getFullname(),
                     signupRequestTeacher.getAge(), signupRequestTeacher.getAddress(),
                     signupRequestTeacher.getSex(), signupRequestTeacher.getCv(),
-                    signupRequestTeacher.getLevel());
-
+                    signupRequestTeacher.getLevel(), signupRequestTeacher.getAvatar());
             teacherRepository.save(newTeacher);
 
             return Const.SUCCESS;
@@ -344,5 +346,9 @@ public class UserService {
         } catch (Exception e) {
             return e.toString();
         }
+    }
+
+    public String createClass(ClassroomRequest classroom, Integer idOwner) {
+        return null;
     }
 }

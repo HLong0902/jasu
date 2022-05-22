@@ -36,6 +36,9 @@ public class Teacher {
     @Column(name = "level", nullable = true)
     private Integer level;
 
+    @Column(name = "avatar")
+    private String avatar;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

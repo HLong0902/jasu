@@ -31,18 +31,19 @@ public class TeacherRequest {
     @Size(max = 15)
     private String phone;
 
-    private String fullName;
+    private String fullname;
     private Integer age;
     private String address;
     private Integer sex;
     private String cv;
     private Integer level;
+    private String avatar;
 
     public Teacher toEntity(){
         return new Teacher(
-                0, this.getFullName(), this.getAge(),
+                0, this.getFullname(), this.getAge(),
                 this.getAddress(), this.getSex(),
-                this.getCv(), this.getLevel()
+                this.getCv(), this.getLevel(), this.getAvatar()
         );
     }
 }

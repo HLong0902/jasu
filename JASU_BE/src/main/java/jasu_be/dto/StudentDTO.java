@@ -16,9 +16,8 @@ public class StudentDTO {
     private Integer age;
     private String address;
     private String sex;
-
+    private String avatar;
     private List<RateDTO> rate;
-
 
     @Override
     public boolean equals(Object o) {

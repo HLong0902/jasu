@@ -20,12 +20,6 @@ public class StudentController extends CommonController {
         return toSuccessResult(studentService.requestJoinClass(idStudent, idClass));
     }
 
-
-    @PostMapping("newClass")
-    public ResponseEntity<?> createClass(@RequestBody ClassroomRequest classroom, @RequestParam Integer idOwner) {
-        return toSuccessResult(studentService.createClass(classroom, idOwner));
-    }
-
     @PostMapping("inviteTeacher")
     public ResponseEntity<?> inviteTeacher(@RequestParam Integer idClass, @RequestParam Integer idTeacher, @RequestParam Integer idUser) {
         return toSuccessResult(studentService.inviteTeacher(idClass, idTeacher, idUser));

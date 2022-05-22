@@ -25,4 +25,5 @@ public class ClassroomRequest {
     private String subject;
     private Integer onlOff;
     private String voiceRegion;
+    private String avatar;
 }
